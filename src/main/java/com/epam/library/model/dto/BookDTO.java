@@ -1,11 +1,11 @@
-package com.epam.library.dto;
+package com.epam.library.model.dto;
 
 import java.util.List;
 
 public class BookDTO {
     private Long id;
     private String title;
-    private List<String> authors;
+    private List<String> authorNames;
 
     public Long getId() {
         return id;
@@ -23,11 +23,11 @@ public class BookDTO {
         this.title = title;
     }
 
-    public List<String> getAuthors() {
-        return authors;
+    public List<String> getAuthorNames() {
+        return authorNames;
     }
 
-    public void setAuthors(List<String> authors) {
-        this.authors = authors;
+    public void setAuthorNames(List<String> authorNames) {
+        this.authorNames = authorNames;
     }
 }

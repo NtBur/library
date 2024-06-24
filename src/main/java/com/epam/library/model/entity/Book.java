@@ -1,4 +1,4 @@
-package com.epam.library.entity;
+package com.epam.library.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -17,14 +17,7 @@ public class Book implements Serializable {
     @Column(name = "title")
     private String title;
 
-   /* @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "authors_books",
-            joinColumns = {
-                    @JoinColumn(name = "book_id", referencedColumnName = "id",
-                            nullable = false)},
-            inverseJoinColumns = {
-                    @JoinColumn(name = "author_id", referencedColumnName = "id",
-                            nullable = false)})*/
+
    @JsonIgnore
    @ManyToMany(mappedBy="books")
     private Set<Author> authors = new HashSet<>();
@@ -59,5 +52,4 @@ public class Book implements Serializable {
     public void setAuthors(Set<Author> authors) {
         this.authors = authors;
     }
-
 }

@@ -1,4 +1,4 @@
-package com.epam.library.entity;
+package com.epam.library.model.entity;
 
 import jakarta.persistence.*;
 
@@ -16,15 +16,6 @@ public class Author implements Serializable {
     @Column(name = "name")
     private String name;
 
-   /* @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "authors_books",
-            joinColumns = {
-                    @JoinColumn(name = "author_id", referencedColumnName = "id",
-                            nullable = false)},
-            inverseJoinColumns = {
-                    @JoinColumn(name = "book_id", referencedColumnName = "id",
-                            nullable = false)})
-    private Set<Book> books = new HashSet<>();*/
    @ManyToMany(cascade = CascadeType.ALL)
    @JoinTable(name = "authors_books",
            joinColumns = {

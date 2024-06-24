@@ -2,8 +2,8 @@ package com.epam.library;
 
 import com.epam.library.repository.AuthorRepository;
 import com.epam.library.repository.BookRepository;
-import com.epam.library.entity.Author;
-import com.epam.library.entity.Book;
+import com.epam.library.model.entity.Author;
+import com.epam.library.model.entity.Book;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
